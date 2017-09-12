@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace BeerXML.Models
 {
-    public enum DataTagFormat {RecordSet, Record, Percentage, List, Text, Boolean, Integer, FloatingPoint }
-
     [AttributeUsage(AttributeTargets.Property)]
     public class DataTagAttribute : Attribute
     {
-        public string Name { get; set; }
+        public string Name { get; set; }//only necessary if the property name won't be the same as the xml element name
         public bool Required { get; set; }
-        public UnitsNet.QuantityType QuantityType { get; set; }
+        public object Unit { get; set; }//only necessary if the default beerxml unit is not correct and the type is a UnitsNet unit
 
         public DataTagAttribute(bool required)
         {
             Required = required;
-            QuantityType = UnitsNet.QuantityType.Undefined;
+            Unit = null;
         }
     }
 }

@@ -31,17 +31,17 @@ namespace BeerXML.Models
         }
         
 
-        [DataTag(true, QuantityType = UnitsNet.QuantityType.Ratio)]
-        public double Alpha { get; set; }
+        [DataTag(true)]
+        public UnitsNet.Ratio Alpha { get; set; }
 
-        [DataTag(true, QuantityType = UnitsNet.QuantityType.Mass)]
-        public double Amount { get; set; }
+        [DataTag(true)]
+        public UnitsNet.Mass Amount { get; set; }
 
         [DataTag(true)]
         public Uses Use { get; set; }
 
-        [DataTag(true, QuantityType = UnitsNet.QuantityType.Duration)]
-        public double Time { get; set; }
+        [DataTag(true)]
+        public UnitsNet.Duration Time { get; set; }
 
         [DataTag(false)]
         public string Notes { get; set; }
@@ -52,11 +52,11 @@ namespace BeerXML.Models
         [DataTag(false)]
         public Forms Form { get; set; }
 
-        [DataTag(false, QuantityType = UnitsNet.QuantityType.Ratio)]
-        public double Beta { get; set; }
+        [DataTag(false)]
+        public UnitsNet.Ratio Beta { get; set; }
 
-        [DataTag(false, QuantityType = UnitsNet.QuantityType.Ratio)]
-        public double HSI { get; set; }
+        [DataTag(false)]
+        public UnitsNet.Ratio HSI { get; set; }
 
         [DataTag(false)]
         public string Origin { get; set; }
@@ -64,16 +64,16 @@ namespace BeerXML.Models
         [DataTag(false)]
         public string Substitutes { get; set; }
 
-        [DataTag(false, QuantityType = UnitsNet.QuantityType.Ratio)]
-        public double Humulene { get; set; }
+        [DataTag(false)]
+        public UnitsNet.Ratio Humulene { get; set; }
 
-        [DataTag(false, QuantityType = UnitsNet.QuantityType.Ratio)]
-        public double Caryophyllene { get; set; }
+        [DataTag(false)]
+        public UnitsNet.Ratio Caryophyllene { get; set; }
 
-        [DataTag(false, QuantityType = UnitsNet.QuantityType.Ratio)]
-        public double Cohumulone { get; set; }
+        [DataTag(false)]
+        public UnitsNet.Ratio Cohumulone { get; set; }
 
-        [DataTag(false, QuantityType = UnitsNet.QuantityType.Ratio)]
-        public double Myrcene { get; set; }
+        [DataTag(false)]
+        public UnitsNet.Ratio Myrcene { get; set; }
     }
 }
